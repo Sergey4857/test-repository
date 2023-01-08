@@ -23,6 +23,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-top: 76px;
 }
 ul {
   list-style: none;
@@ -181,12 +182,21 @@ opacity: 1;
 }
 
 .header{
+   z-index: 1;
+
   padding-bottom: 24px;
   padding-top: 24px;
-
+  padding-left: 156px;
+  padding-right: 156px;
+   width: 1440px;
    border-bottom: 1px solid #E7E9FC;
    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
+   position: fixed;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%);
+   background-color: #ffffff;
+   
 }
 
 .header a {
@@ -376,7 +386,7 @@ transform: translateY(+40px);
 }
 .hero-button::before{
    position: absolute;
-   right: 10%;
+   right: 15px;
 
 
    content: '';
@@ -389,12 +399,12 @@ transform: translateY(+40px);
    transition-property: transform;
    transition-duration: 200ms;
    transition-timing-function: linear;
-   transform: translateY(-37px);
+   transform: translateY(-200% );
 }
 
 .hero-button:hover::before { 
 
-transform: translateY(calc( +180% - 37px )) ;
+transform: translateY(0);
 }
 
 
@@ -481,6 +491,16 @@ align-items: center;
 display: flex;
 
 }
+
+.work-item:hover{
+transform: scale(1.2);
+transition-duration: 200ms;
+transition-timing-function: linear;
+}
+
+
+
+
 
 .work-item +.work-item{
 
@@ -743,6 +763,7 @@ background-color: #31D0AA;
 
 
 .project-list {
+   z-index: 0;
 display: flex;
 flex-wrap: wrap;
 column-gap: 24px;
